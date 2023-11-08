@@ -33,7 +33,6 @@
 
     <title>Frontend Mentor | Ping coming soon page</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
       .attribution {
         font-size: 11px;
@@ -57,10 +56,10 @@
       <div class="main-container">
         <form action="/" id="form">
           
-          <input type="email" id="email" placeholder="Your email address..." />
+          <input type="email" id="email" placeholder="Your email address..." onkeyup="validateEmail()"/>
           <div class="error"></div>
 
-          <button type="submit">Notify Me</button>
+          <button type="submit" onclick="return formValidation()">Notify Me</button>
         </form>
 
         <img src="./images/illustration-dashboard.png" alt="" />
@@ -68,7 +67,7 @@
 
       <div class="footer-container">
         <div class="social-links">
-          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
           <a href="#"><i class="fab fa-twitter"></i></a>
           <a href="#"><i class="fab fa-instagram"></i></a>
         </div>

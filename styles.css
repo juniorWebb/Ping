@@ -15,7 +15,7 @@
 
 body {
   margin: 10rem auto;
-  width: 100vw;
+  width: 100%;
   text-align: center;
   font-size: 20px;
 }
@@ -40,20 +40,28 @@ b {
 }
 
 .main-container form {
-  width: 100vw;
+  width: 90%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 30px auto;
   gap: 1rem;
+  position: relative;
 }
 
 .main-container input {
-  width: 50vw;
+  width: 70vw;
   outline: none;
   padding: 16px;
   border: 1px solid var(--paleBlue);
   border-radius: 26px;
+}
+
+.error{
+  position: absolute;
+  font-size: 0.7rem;
+  bottom: -20px;
+  left: 24px; 
 }
 
 .main-container button {
@@ -69,13 +77,13 @@ b {
 .main-container button:hover {
   background-color: hsl(223, 75%, 69%);
 }
-
 .main-container img {
+  margin-top: 1.6rem;
   width: 70vw;
 }
 
 .footer-container .social-links {
-  width: 200px;
+  width: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -84,11 +92,16 @@ b {
 
 .footer-container .social-links a {
   color: var(--blue);
-  padding: 8px;
-  line-height: 1;
   background-color: #fff;
-  border-radius: 100%;
+  border-radius: 50%;
+  padding: 4px 5px;
   border: 1px solid rgba(0, 0, 0, 0.09);
+}
+.footer-container .social-links a > i {
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  font-size: 0.9rem;
 }
 
 .footer-container .social-links a:hover {
@@ -103,12 +116,19 @@ b {
   font-size: 16px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 580px) {
   .main-container form {
     flex-direction: column;
     gap: 0.6rem;
   }
   .main-container input, .main-container button {
     width: 70vw;
+  }
+  .error{
+    position: relative;
+    font-size: 0.7rem;
+    bottom: 0;
+    left: 0; 
+    margin: -0.2rem 0 0.6rem 0;
   }
 }
